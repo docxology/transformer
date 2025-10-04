@@ -1,0 +1,28 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+einops>=0.6.1
+
+# Visualization & Animation
+plotly>=5.18.0          # Interactive visualizations
+networkx>=3.2           # Network graph layouts
+tqdm>=4.66.0            # Progress bars
+
+# Interactive dashboards (optional for advanced features)
+dash>=2.14.0            # Web dashboards
+ipywidgets>=8.1.0       # Jupyter interactivity
+
+# Testing
+pytest>=7.3.0
+pytest-mpl>=0.16.0      # Visual regression testing
+
+# Documentation & Reporting
+pyyaml>=6.0.0
+jupyter>=1.0.0
+
+# Advanced features (optional)
+scikit-learn>=1.3.0     # PCA for 3D visualizations
+Pillow>=10.0.0          # Image processing
+

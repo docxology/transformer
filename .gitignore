@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data
+data/
+*.pt
+*.pth
+
+# Visualizations (but keep example outputs)
+outputs/logs/
+outputs/data/
+outputs/analysis/*.json
+outputs/reports/*.json
+*.mp4
+
+# Keep example visualizations and animations
+!outputs/visualizations/example_*.png
+!outputs/visualizations/architecture_*.png
+!outputs/visualizations/information_highways.png
+!outputs/visualizations/attention_layer_0.png
+!outputs/visualizations/residual_stream.png
+!outputs/visualizations/kv_stream.png
+!outputs/animations/example_*.gif
+!outputs/animations/01_information_flow.gif
+!outputs/animations/02_attention_evolution.gif
+
+

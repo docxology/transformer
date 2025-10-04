@@ -1,0 +1,45 @@
+# Cursor Rules for First-Principles Transformer
+
+## Code Style
+- Use professional, functional, intelligent, modular, concise, elegant code
+- Clear comments explaining the "why" not just the "what"
+- Documentation should be understated and "show not tell"
+- Follow Python PEP 8 style guidelines
+
+## Development Approach
+- Test-driven development (TDD) with unified modular approach
+- All modules should have corresponding tests
+- Use real data analysis, no mock methods
+- Modular, well-documented, clearly reasoned code
+
+## File Organization
+- Keep modules focused and single-purpose
+- Separate concerns: components, visualization, utilities
+- Clear import structure and dependencies
+
+## Transformer-Specific
+- Always track both information highways:
+  - Residual stream (vertical flow through layers)
+  - K/V stream (horizontal flow across positions)
+- Enable state tracking for visualization and analysis
+- Maintain clear separation between computation and visualization
+
+## Testing
+- Comprehensive test coverage for all components
+- Test both individual components and integration
+- Include tests for visualization functions
+- Test edge cases and error conditions
+
+## Documentation
+- Clear docstrings for all public functions and classes
+- Explain the conceptual purpose, not just mechanics
+- Reference the information flow architecture in comments
+- Include usage examples where helpful
+
+## Visualization
+- All visualizations should be clear and informative
+- Support both static and animated outputs
+- Enable customization of visualization parameters
+- Save outputs with descriptive names
+
+
