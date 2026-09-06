@@ -6,11 +6,14 @@ NO MOCKS - All real computations and data.
 """
 
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 import torch
 import json
-from pathlib import Path
 from datetime import datetime
 from src.transformer import Transformer, TransformerConfig
 from src.config import get_preset_config

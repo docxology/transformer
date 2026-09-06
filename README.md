@@ -196,7 +196,10 @@ transformer/
 ├── scripts/             # Utility scripts
 │   ├── verify_installation.py
 │   ├── generate_all_animations.py
+│   ├── generate_architecture_visualizations.py
 │   ├── generate_complete_documentation.py
+│   ├── generate_subway_map.py
+│   ├── organize_outputs.py
 │   └── run_comprehensive_validation.py
 │
 ├── doc/                 # Complete documentation

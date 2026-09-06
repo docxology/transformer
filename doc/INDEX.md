@@ -160,13 +160,17 @@ transformer/
 │       ├── helpers.py
 │       ├── reporting.py
 │       ├── logging_system.py  ⭐ NEW
-│       └── analysis_tools.py  ⭐ NEW
+│       ├── analysis_tools.py  ⭐ NEW
+│       └── documentation.py   # Manifest + report generation
 ├── tests/                    # Test suite (74 tests)
 ├── examples/                 # Usage examples (7 examples)
 ├── scripts/                  # Utility scripts
 │   ├── verify_installation.py
 │   ├── generate_all_animations.py
+│   ├── generate_architecture_visualizations.py
 │   ├── generate_complete_documentation.py
+│   ├── generate_subway_map.py
+│   ├── organize_outputs.py
 │   └── run_comprehensive_validation.py
 ├── doc/                     # Documentation (20+ files)
 │   ├── concepts/            # Core concepts

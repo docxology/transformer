@@ -2,6 +2,13 @@
 Quick verification script to test the transformer installation.
 """
 
+import sys
+from pathlib import Path
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
 import torch
 from src.transformer import Transformer, TransformerConfig
 from src.visualization import compute_path_counts, analyze_path_complexity

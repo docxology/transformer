@@ -6,10 +6,13 @@ of transformer operation and information flow.
 """
 
 import sys
-sys.path.insert(0, '.')
+from pathlib import Path
+
+# Add project root to path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 import torch
-from pathlib import Path
 from src.transformer import Transformer, TransformerConfig
 from src.config import get_preset_config
 from src.visualization import (
