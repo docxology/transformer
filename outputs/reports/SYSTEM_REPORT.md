@@ -15,8 +15,8 @@ The First-Principles Transformer is a comprehensive, modular, and fully visualiz
 | Animation Files | 1 |
 | Visualization Files | 0 |
 | Analysis Files | 0 |
-| Log Files | 0 |
-| **Total Files** | **101** |
+| Log Files | 2 |
+| **Total Files** | **103** |
 
 ## Capabilities Summary
 
@@ -54,30 +54,30 @@ The First-Principles Transformer is a comprehensive, modular, and fully visualiz
 ## Documentation Structure
 
 ### Concept Documentation
-- [information_flow](doc/concepts/information_flow.md)
-- [attention](doc/concepts/attention.md)
+- [information_flow](../../doc/concepts/information_flow.md)
+- [attention](../../doc/concepts/attention.md)
 
 ### User Guides
-- [Quickstart](doc/guides/quickstart.md)
-- [Visualization](doc/guides/visualization.md)
-- [Animations](doc/guides/animations.md)
-- [Analysis](doc/guides/analysis.md)
+- [Quickstart](../../doc/guides/quickstart.md)
+- [Visualization](../../doc/guides/visualization.md)
+- [Animations](../../doc/guides/animations.md)
+- [Analysis](../../doc/guides/analysis.md)
 
 ### System Documentation
-- [README](README.md)
-- [QUICK_START](QUICK_START.md)
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [ARCHITECTURE](doc/ARCHITECTURE.md)
-- [OVERVIEW](doc/OVERVIEW.md)
-- [VALIDATION_CERTIFICATE](doc/VALIDATION_CERTIFICATE.md)
-- [DOCUMENTATION_INDEX](doc/DOCUMENTATION_INDEX.md)
+- [README](../../README.md)
+- [QUICK_START](../../QUICK_START.md)
+- [CONTRIBUTING](../../CONTRIBUTING.md)
+- [ARCHITECTURE](../../doc/ARCHITECTURE.md)
+- [OVERVIEW](../../doc/OVERVIEW.md)
+- [VALIDATION_CERTIFICATE](../../doc/VALIDATION_CERTIFICATE.md)
+- [DOCUMENTATION_INDEX](../../doc/DOCUMENTATION_INDEX.md)
 
 ### Examples
-- [basic_usage](examples/basic_usage.py)
-- [path_analysis](examples/path_analysis.py)
-- [animation_demo](examples/animation_demo.py)
-- [training_example](examples/training_example.py)
-- [README](examples/README.md)
+- [basic_usage](../../examples/basic_usage.py)
+- [path_analysis](../../examples/path_analysis.py)
+- [animation_demo](../../examples/animation_demo.py)
+- [training_example](../../examples/training_example.py)
+- [README](../../examples/README.md)
 
 ## Output Structure
 
@@ -86,7 +86,7 @@ outputs/
 ├── animations/        # 1 animated visualizations
 ├── visualizations/    # 0 static plots
 ├── analysis/          # 0 analysis results
-├── logs/             # 0 execution logs
+├── logs/             # 2 execution logs
 ├── reports/          # Auto-generated reports
 ├── data/             # Generated data
 └── configs/          # Saved configurations
@@ -137,10 +137,10 @@ outputs/
 If you use this implementation:
 
 ```bibtex
-@software{transformer2024,
+@software{transformer2025,
   title = {First-Principles Transformer},
-  year = {2024},
-  url = {https://github.com/yourusername/transformer}
+  year = {2025},
+  url = {https://github.com/docxology/transformer}
 }
 ```
 

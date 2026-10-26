@@ -12,7 +12,7 @@ This guide provides practical guidance for implementing, training, and deploying
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/transformer.git
+git clone https://github.com/docxology/transformer.git
 cd transformer
 
 # Run complete setup (handles dependencies, examples, validation)

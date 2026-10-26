@@ -81,7 +81,7 @@ Thank you for your interest in contributing! This project welcomes contributions
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.10+ (current PyTorch and Matplotlib releases require it)
 - git
 - (Optional) `uv` for fast dependency installation
 
@@ -202,11 +202,11 @@ pytest tests/ -v
 # Run specific test file
 pytest tests/test_model.py -v
 
-# Run with coverage
+# Run with coverage (requires: pip install pytest-cov)
 pytest tests/ --cov=src --cov-report=html
 
 # Run specific test
-pytest tests/test_model.py::test_forward_pass -v
+pytest tests/test_model.py::TestTransformer::test_forward_shape -v
 ```
 
 ### Writing Tests
@@ -422,7 +422,7 @@ Closes #45
 
 ### Feature Requests
 
-See [GitHub Issues](issues) for current feature requests and discussions.
+See [GitHub Issues](https://github.com/docxology/transformer/issues) for current feature requests and discussions.
 
 ---
 

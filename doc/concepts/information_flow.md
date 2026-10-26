@@ -126,8 +126,8 @@ visualize_information_highways(state)
 ## Further Reading
 
 - [Attention Mechanism](attention.md) - How Q, K, V work
-- [Path Explosion](path_explosion.md) - Mathematical analysis
-- [Residual Stream](residual_stream.md) - Vertical flow details
-- [K/V Stream](kv_stream.md) - Horizontal flow details
+- [Path Explosion](../theory/TRANSFORMER_THEORY.md#computational-path-explosion) - Mathematical analysis
+- [Residual Stream](../ARCHITECTURE.md#1-residual-stream-vertical-flow) - Vertical flow details
+- [K/V Stream](../ARCHITECTURE.md#2-kv-stream-horizontal-flow) - Horizontal flow details
 
 

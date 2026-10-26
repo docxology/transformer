@@ -49,7 +49,7 @@ This redundancy enables:
 - Rich interference patterns
 - Nuanced encodings
 
-See [Path Explosion](concepts/path_explosion.md).
+See [Path Explosion](theory/TRANSFORMER_THEORY.md#computational-path-explosion).
 
 ### Q: Can transformers really introspect?
 
@@ -254,7 +254,7 @@ pytest tests/test_model.py::TestTransformer::test_forward_shape -v
 3. Use fixtures for common setup
 4. Run and verify
 
-See [Testing Guide](development/testing.md).
+See [Testing Guide](guides/IMPLEMENTATION_GUIDE.md#testing).
 
 ## Common Issues
 
@@ -323,7 +323,7 @@ logits, state = model(input_ids, mask=None)
 
 ### Q: How do I contribute?
 
-**A:** See [Contributing Guide](development/contributing.md):
+**A:** See [Contributing Guide](../CONTRIBUTING.md):
 1. Fork repository
 2. Create feature branch
 3. Write code + tests + docs
@@ -343,7 +343,7 @@ logits, state = model(input_ids, mask=None)
 ## Still Have Questions?
 
 - Check [Documentation Index](INDEX.md)
-- Read [Troubleshooting Guide](TROUBLESHOOTING.md)
+- Read [Troubleshooting Guide](guides/running.md#troubleshooting)
 - Look at [Examples](../examples/)
 - Open an issue on GitHub
 

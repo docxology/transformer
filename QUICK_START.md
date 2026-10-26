@@ -7,7 +7,7 @@ Get started with the First-Principles Transformer in under 5 minutes.
 ## 1. Clone & Setup (1 minute)
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/docxology/transformer.git
 cd transformer
 ```
 
@@ -77,7 +77,7 @@ visualize_attention(attention, save_path='my_attention.png')
 
 **Get Help**:
 - [FAQ](doc/FAQ_COMPREHENSIVE.md) - 45 questions answered
-- [Glossary](doc/GLOSSARY.md) - 150+ terms defined
+- [Glossary](doc/GLOSSARY.md) - 77 terms defined
 - [Documentation Index](doc/DOCUMENTATION_INDEX.md) - Master hub
 
 ---
@@ -120,15 +120,15 @@ python scripts/generate_architecture_visualizations.py
 ### Code
 - ✅ Complete transformer implementation
 - ✅ 20+ visualization functions
-- ✅ 74 comprehensive tests
+- ✅ 109 comprehensive tests
 - ✅ 4 complete examples
 - ✅ 7 configuration presets
 
 ### Documentation
-- ✅ ~100,000 words comprehensive docs
+- ✅ ~33,500 words comprehensive docs
 - ✅ 6 structured learning paths
 - ✅ 45-question FAQ
-- ✅ 150-term glossary
+- ✅ 77-term glossary
 - ✅ Complete theory + math + stats
 
 ### Visualizations
@@ -142,7 +142,7 @@ python scripts/generate_architecture_visualizations.py
 
 ## Requirements
 
-**Python**: 3.8+  
+**Python**: 3.10+  
 **Dependencies**: All installed automatically by `run.py`
 
 **Optional but recommended**:
@@ -160,11 +160,10 @@ transformer/
 ├── run.py                    # ⭐ Start here
 ├── README.md                 # Project overview
 ├── QUICK_START.md           # This file
-├── PROJECT_STATUS.md        # Current status
 │
 ├── examples/                # 4 complete examples
 ├── src/                     # All source code
-├── tests/                   # 74 tests
+├── tests/                   # 109 tests
 ├── doc/                     # Complete documentation
 └── outputs/                 # Generated files
 ```

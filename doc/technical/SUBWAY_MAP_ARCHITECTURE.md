@@ -475,7 +475,7 @@ If you use the subway map visualization in your research, please cite:
   title = {Architecturally Accurate Transformer Subway Map Visualization},
   author = {First-Principles Transformer Project},
   year = {2025},
-  url = {https://github.com/yourusername/transformer},
+  url = {https://github.com/docxology/transformer},
   note = {Quantitatively verified network graph visualization}
 }
 ```

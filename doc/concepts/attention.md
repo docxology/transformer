@@ -212,7 +212,7 @@ class MultiHeadAttention(nn.Module):
 ## Further Reading
 
 - [Information Flow](information_flow.md) - How attention fits in the architecture
-- [K/V Stream](kv_stream.md) - Horizontal information flow
-- [Path Explosion](path_explosion.md) - Computational paths through attention
+- [K/V Stream](../ARCHITECTURE.md#2-kv-stream-horizontal-flow) - Horizontal information flow
+- [Path Explosion](../theory/TRANSFORMER_THEORY.md#computational-path-explosion) - Computational paths through attention
 
 

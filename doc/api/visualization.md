@@ -447,7 +447,7 @@ def analyze_model(model, input_ids):
 ## See Also
 
 - [Visualization Guide](../guides/visualization.md) - Detailed usage guide
-- [Examples](../examples/visualization.md) - Practical examples
+- [Examples](../../examples/README.md) - Practical examples
 - [Concepts: Information Flow](../concepts/information_flow.md) - Understanding what to visualize
 
 

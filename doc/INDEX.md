@@ -29,7 +29,7 @@ Complete guide to the `run.py` script:
 - Troubleshooting
 - Advanced usage
 
-### [Setup Improvements](SETUP_IMPROVEMENTS.md) ⭐ NEW
+### [Environment Setup Details](guides/running.md)
 Technical details on environment improvements:
 - Automatic PYTHONPATH management
 - uv integration (10-100x faster)
@@ -101,13 +101,13 @@ Answers to common questions:
 
 ## System Documentation
 
-### [Complete Summary](COMPLETE_SUMMARY.md)
+### [Complete Summary](OVERVIEW.md)
 Comprehensive overview of all features and capabilities.
 
 ### [Validation Certificate](VALIDATION_CERTIFICATE.md)
 Confirmation that all methods are real (no mocks/fakes).
 
-### [System Capabilities](SYSTEM_CAPABILITIES.md) ⭐ NEW
+### [System Capabilities](OVERVIEW.md)
 Complete capability reference:
 - All components listed
 - All visualization types
@@ -162,8 +162,8 @@ transformer/
 │       ├── logging_system.py  ⭐ NEW
 │       ├── analysis_tools.py  ⭐ NEW
 │       └── documentation.py   # Manifest + report generation
-├── tests/                    # Test suite (74 tests)
-├── examples/                 # Usage examples (7 examples)
+├── tests/                    # Test suite (109 tests)
+├── examples/                 # Usage examples (4 examples)
 ├── scripts/                  # Utility scripts
 │   ├── verify_installation.py
 │   ├── generate_all_animations.py
@@ -204,7 +204,7 @@ transformer/
 3. Check [API Reference](api/visualization.md)
 
 ### For Developers
-1. Read [System Capabilities](SYSTEM_CAPABILITIES.md)
+1. Read [System Capabilities](../README.md#whats-included)
 2. Review [Test Suite](../tests/)
 3. See [Examples](../examples/)
 
@@ -232,7 +232,7 @@ transformer/
 - [Animation Guide](guides/animations.md) - Complete animation reference
 - [Analysis Guide](guides/analysis.md) - Analysis toolkit guide
 - [Animation Index](ANIMATION_INDEX.md) - Animation quick reference
-- [System Capabilities](../SYSTEM_CAPABILITIES.md) - Full capability list
+- [System Capabilities](../README.md#whats-included) - Full capability list
 
 ### New Logging & Reporting
 - `TransformerLogger` - Structured logging system
@@ -244,11 +244,11 @@ transformer/
 ## File Count Summary
 
 As of latest generation:
-- **83 total project files**
-- **20 documentation files**
-- **19 output files** (animations, visualizations, analysis)
-- **34 Python source files**
-- **74 tests** (100% passing)
+- **152 tracked project files**
+- **44 documentation files** (37 in `doc/`, 7 at the repo root)
+- **6 tracked output files** (animations, reports, indexes)
+- **43 Python source files** in `src/`
+- **109 tests** (100% passing)
 
 ## Next Steps
 

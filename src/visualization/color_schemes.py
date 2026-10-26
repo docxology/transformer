@@ -130,12 +130,13 @@ def create_perceptually_uniform_colormap(
     Returns:
         Matplotlib colormap
     """
+    import matplotlib as mpl
     import matplotlib.cm as cm
     import matplotlib.colors as mcolors
-    
-    cmap = cm.get_cmap(name, n_colors)
+
+    cmap = mpl.colormaps[name].resampled(n_colors)
     norm = mcolors.Normalize(vmin=0, vmax=1)
-    
+
     return cm.ScalarMappable(norm=norm, cmap=cmap)
 
 

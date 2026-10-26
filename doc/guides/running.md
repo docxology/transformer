@@ -209,7 +209,7 @@ tail -f run.log
 ssh your-server
 
 # Clone and run
-git clone <repository-url>
+git clone https://github.com/docxology/transformer.git
 cd transformer
 python3 run.py --skip-install  # if deps already installed
 ```

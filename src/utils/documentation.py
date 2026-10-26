@@ -207,16 +207,16 @@ The First-Principles Transformer is a comprehensive, modular, and fully visualiz
 ## Documentation Structure
 
 ### Concept Documentation
-{chr(10).join(f"- [{Path(p).stem}]({p})" for p in index['documentation_structure']['concepts'])}
+{chr(10).join(f"- [{Path(p).stem}](../../{p})" for p in index['documentation_structure']['concepts'])}
 
 ### User Guides
-{chr(10).join(f"- [{Path(p).stem.title()}]({p})" for p in index['documentation_structure']['guides'])}
+{chr(10).join(f"- [{Path(p).stem.title()}](../../{p})" for p in index['documentation_structure']['guides'])}
 
 ### System Documentation
-{chr(10).join(f"- [{Path(p).stem}]({p})" for p in index['documentation_structure']['system_docs'])}
+{chr(10).join(f"- [{Path(p).stem}](../../{p})" for p in index['documentation_structure']['system_docs'])}
 
 ### Examples
-{chr(10).join(f"- [{Path(p).stem}]({p})" for p in index['documentation_structure']['examples'])}
+{chr(10).join(f"- [{Path(p).stem}](../../{p})" for p in index['documentation_structure']['examples'])}
 
 ## Output Structure
 
@@ -276,10 +276,10 @@ outputs/
 If you use this implementation:
 
 ```bibtex
-@software{{transformer2024,
+@software{{transformer2025,
   title = {{First-Principles Transformer}},
-  year = {{2024}},
-  url = {{https://github.com/yourusername/transformer}}
+  year = {{2025}},
+  url = {{https://github.com/docxology/transformer}}
 }}
 ```
 

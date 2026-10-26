@@ -50,7 +50,7 @@ transformer/
 │   │
 │   └── utils/                   # Helper functions
 │
-├── tests/                       # Comprehensive test suite (50 tests)
+├── tests/                       # Comprehensive test suite (109 tests)
 │   ├── test_components.py       # Component-level tests
 │   ├── test_model.py           # Model & integration tests
 │   └── test_visualization.py   # Visualization tests
@@ -199,7 +199,7 @@ print(analysis)
 
 ## Test Suite
 
-Comprehensive testing with 50 tests covering:
+Comprehensive testing with 109 tests covering:
 
 - **Component Tests**: Each module tested independently
   - Token embedding & scaling

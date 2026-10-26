@@ -354,9 +354,9 @@ If you use these animations in publications or presentations:
 ```bibtex
 @software{transformer_animations,
   title = {First-Principles Transformer Animations},
-  author = {Your Name},
-  year = {2024},
-  url = {https://github.com/yourusername/transformer}
+  author = {docxology},
+  year = {2025},
+  url = {https://github.com/docxology/transformer}
 }
 ```
 

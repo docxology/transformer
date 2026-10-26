@@ -25,4 +25,5 @@ minutes on CPU; `verify_installation.py` is the quick smoke check.
 ## Tests
 
 Testable behavior lives in `src/` and is covered by the pytest suite in
-`tests/` (`uv run pytest -q` from the repo root). No tests live here.
+`tests/` (`pytest tests/ -q` from the repo root, after
+`pip install -r requirements.txt`). No tests live here.

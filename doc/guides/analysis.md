@@ -462,6 +462,6 @@ if problematic:
 
 - See [Animation Guide](animations.md) for visual analysis
 - Check [Visualization Guide](visualization.md) for static plots
-- Review [API Reference](../api/analysis.md) for detailed parameters
+- Review the [analysis toolkit source](../../src/utils/analysis_tools.py) for detailed parameters
 
 

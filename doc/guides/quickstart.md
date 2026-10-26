@@ -6,7 +6,7 @@ Get running with the transformer in 5 minutes.
 
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/docxology/transformer.git
 cd transformer
 
 # Install dependencies
@@ -156,17 +156,17 @@ model.load_state_dict(torch.load('model.pth'))
 
 ## Next Steps
 
-- [Basic Usage Guide](basic_usage.md) - More detailed examples
-- [Training Guide](training.md) - Complete training workflow
+- [Basic Usage Example](../../examples/basic_usage.py) - More detailed examples
+- [Training Example](../../examples/training_example.py) - Complete training workflow
 - [Visualization Guide](visualization.md) - All visualization options
-- [API Reference](../api/model.md) - Detailed API documentation
+- [API Reference](../api/visualization.md) - Detailed API documentation
 
 ## Verification
 
 Run the verification script to ensure everything works:
 
 ```bash
-python3 verify_installation.py
+python3 scripts/verify_installation.py
 ```
 
 ## Common Issues

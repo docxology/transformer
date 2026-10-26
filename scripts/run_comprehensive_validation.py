@@ -12,6 +12,9 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
+import re
+import subprocess
+import time
 import torch
 import json
 from datetime import datetime
@@ -225,15 +228,43 @@ def run_validation():
     print(f"  Forward time: {profile['forward_time_ms']:.2f}ms")
     print()
     
+    # Run the test suite (REAL pytest run - no hardcoded results)
+    print("Running test suite (REAL pytest run)...")
+    test_started = time.perf_counter()
+    test_run = subprocess.run(
+        [sys.executable, '-m', 'pytest', 'tests', '-q', '--no-header',
+         '-p', 'no:cacheprovider'],
+        cwd=project_root, capture_output=True, text=True
+    )
+    test_duration = time.perf_counter() - test_started
+
+    summary_line = next(
+        (line.strip() for line in reversed(test_run.stdout.splitlines())
+         if 'passed' in line or 'failed' in line or 'error' in line),
+        ''
+    )
+
+    def _reported(status: str) -> int:
+        """Parse a pytest summary count, e.g. ``3 failed`` -> 3."""
+        match = re.search(rf'(\d+) {status}\b', summary_line)
+        return int(match.group(1)) if match else 0
+
+    passed = _reported('passed')
+    failed = _reported('failed') + _reported('error') + _reported('errors')
+    skipped = _reported('skipped')
+
+    print(f"  {summary_line or 'pytest produced no summary output'}")
+    print()
+
     # Create metrics report
     metrics = ReportMetrics(
         timestamp=datetime.now().isoformat(),
         model_config=config_dict,
         test_results={
-            'total': 74,
-            'passed': 74,
-            'failed': 0,
-            'duration': 3.01
+            'total': passed + failed + skipped,
+            'passed': passed,
+            'failed': failed,
+            'duration': round(test_duration, 2)
         },
         performance_metrics=perf_data,
         visualization_files=vis_files

@@ -2,7 +2,7 @@
 
 A **comprehensive, production-quality, educational** transformer implementation with complete visualization, evaluation, and documentation.
 
-[![Tests](https://img.shields.io/badge/tests-74%20passing-brightgreen)]() 
+[![Tests](https://img.shields.io/badge/tests-109%20passing-brightgreen)]() 
 [![Documentation](https://img.shields.io/badge/docs-complete-blue)]()
 [![Code Style](https://img.shields.io/badge/code%20style-modular-orange)]()
 
@@ -12,7 +12,7 @@ Unlike typical transformer implementations, this provides:
 
 ✅ **Complete Observability** - Track both information highways (residual + K/V streams)  
 ✅ **20+ Visualizations** - From attention heatmaps to animated flow diagrams  
-✅ **74 Tests** - Comprehensive coverage of all components  
+✅ **109 Tests** - Comprehensive coverage of all components  
 ✅ **Full Documentation** - 20+ pages of concepts, guides, and API reference  
 ✅ **Educational Design** - Built to understand, not just use  
 ✅ **Research-Ready** - Easy to modify and extend  
@@ -44,7 +44,7 @@ This massive redundancy enables robust, nuanced information processing.
 The fastest way to get started - install, verify, and run everything:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/docxology/transformer.git
 cd transformer
 python3 run.py
 ```
@@ -76,7 +76,7 @@ python3 run.py --use-venv         # Create and use virtual environment
 ### Manual Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/docxology/transformer.git
 cd transformer
 pip install -r requirements.txt
 ```
@@ -169,7 +169,7 @@ model = Transformer(config)
 
 ### 🧪 Comprehensive Testing
 
-74 tests covering:
+109 tests covering:
 - All components individually
 - Full model integration
 - Visualization functions
@@ -191,7 +191,7 @@ transformer/
 │   ├── config/           # Configuration management
 │   └── utils/            # Helper functions
 │
-├── tests/                # 74 comprehensive tests
+├── tests/                # 109 comprehensive tests
 ├── examples/            # 4 complete examples
 ├── scripts/             # Utility scripts
 │   ├── verify_installation.py
@@ -208,7 +208,7 @@ transformer/
 │   ├── api/           # API reference
 │   ├── ARCHITECTURE.md     # Architecture deep dive
 │   ├── OVERVIEW.md        # Complete overview
-│   └── FAQ.md         # 40+ questions answered
+│   └── FAQ.md         # 32 questions answered
 │
 └── outputs/            # Generated outputs (animations, analysis, etc.)
 ```
@@ -239,7 +239,7 @@ python3 examples/training_example.py
 - [Quick Start Guide](doc/guides/quickstart.md) - Get started in 5 minutes
 - [Learning Paths](doc/DOCUMENTATION_INDEX.md#learning-paths) - 6 structured paths (2-6 hours each)
 - [FAQ](doc/FAQ_COMPREHENSIVE.md) - 45 questions answered
-- [Glossary](doc/GLOSSARY.md) - 150+ terms defined
+- [Glossary](doc/GLOSSARY.md) - 77 terms defined
 - [Practical Recipes](doc/praxis/PRACTICAL_RECIPES.md) - 12 copy-paste solutions
 
 **Theory & Concepts:**
@@ -254,7 +254,7 @@ python3 examples/training_example.py
 - [Visualization Guide](doc/guides/visualization.md) - All 20+ visualization functions
 - [Animation Guide](doc/guides/animations.md) - Creating animated visualizations
 
-**Total Documentation**: ~100,000 words across 28 comprehensive files
+**Total Documentation**: ~33,500 words across 37 files in `doc/`
 
 ## Testing
 
@@ -268,7 +268,7 @@ pytest tests/test_visualization.py -v
 pytest tests/test_evaluation.py -v
 ```
 
-All 74 tests passing ✅
+All 109 tests passing ✅
 
 ## Configuration Presets
 
@@ -404,7 +404,7 @@ This implementation **prioritizes clarity over speed**:
 ✅ 20+ visualization functions  
 ✅ Training & evaluation tools  
 ✅ Configuration management  
-✅ 74 comprehensive tests  
+✅ 109 comprehensive tests  
 ✅ 20+ documentation pages  
 ✅ 4 complete examples  
 ✅ Path analysis tools  
@@ -413,14 +413,14 @@ This implementation **prioritizes clarity over speed**:
 ## Dependencies
 
 All standard, well-maintained libraries:
-- PyTorch ≥2.0.0
+- PyTorch ≥2.6.0 (Python 3.10+)
 - NumPy, Matplotlib, Seaborn, Plotly
 - PyYAML, NetworkX
 - Pytest (for testing)
 
 ## Contributing
 
-Contributions welcome! See [`doc/development/contributing.md`](doc/development/contributing.md)
+Contributions welcome! See [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 Areas of interest:
 - New visualizations
@@ -440,9 +440,9 @@ If you use this in your research, please cite:
 ```bibtex
 @software{first_principles_transformer,
   title={First-Principles Transformer: A Comprehensive Educational Implementation},
-  author={[Your name]},
+  author={docxology},
   year={2025},
-  url={[repository-url]}
+  url={https://github.com/docxology/transformer}
 }
 ```
 
@@ -455,9 +455,9 @@ Built on foundational work:
 
 ## Project Status & Documentation
 
-- [📊 PROJECT_STATUS.md](PROJECT_STATUS.md) - Current status, quick links, and overview
+- [📊 Documentation Verification Report](DOCUMENTATION_VERIFICATION_REPORT.md) - Documentation audit results
 - [📚 Documentation Index](doc/DOCUMENTATION_INDEX.md) - Master documentation hub
-- [🔍 Comprehensive Review](COMPREHENSIVE_REVIEW.md) - Complete quality review
+- [🔍 Validation Certificate](doc/VALIDATION_CERTIFICATE.md) - Evidence that all methods are real (no mocks)
 - [📖 Architecture](doc/ARCHITECTURE.md) - Information flow architecture
 - [🎬 Animation Index](doc/ANIMATION_INDEX.md) - Animation reference guide
 
