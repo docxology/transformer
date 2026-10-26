@@ -445,7 +445,7 @@ If you use the validated subway map visualization in research:
   title = {Quantitatively Validated Transformer Subway Map Visualization},
   author = {First-Principles Transformer Project},
   year = {2025},
-  url = {https://github.com/yourusername/transformer},
+  url = {https://github.com/docxology/transformer},
   note = {Comprehensive validation with 22 tests, 100\% pass rate}
 }
 ```
