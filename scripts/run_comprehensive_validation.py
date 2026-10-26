@@ -242,6 +242,9 @@ def run_validation():
         (line.strip() for line in reversed(test_run.stdout.splitlines())
          if 'passed' in line or 'failed' in line or 'error' in line),
         ''
+    ) or next(
+        (line.strip() for line in reversed(test_run.stderr.splitlines()) if line.strip()),
+        ''
     )
 
     def _reported(status: str) -> int:
@@ -256,6 +259,15 @@ def run_validation():
     print(f"  {summary_line or 'pytest produced no summary output'}")
     print()
 
+    test_errors = []
+    if test_run.returncode != 0:
+        test_errors.append(
+            f"pytest exited with code {test_run.returncode}: "
+            f"{summary_line or 'no summary output'}"
+        )
+        print(f"⚠ TEST SUITE FAILED (exit code {test_run.returncode})")
+        print()
+
     # Create metrics report
     metrics = ReportMetrics(
         timestamp=datetime.now().isoformat(),
@@ -267,7 +279,8 @@ def run_validation():
             'duration': round(test_duration, 2)
         },
         performance_metrics=perf_data,
-        visualization_files=vis_files
+        visualization_files=vis_files,
+        errors=test_errors or None
     )
     
     summarizer.log_run(metrics)
@@ -332,7 +345,12 @@ def run_validation():
     print(f"Total files generated: {sum(info['file_count'] for info in structure['categories'].values())}")
     print(f"Total size: {sum(info['total_size_mb'] for info in structure['categories'].values()):.2f} MB")
     print()
-    print("✅ ALL SYSTEMS VALIDATED")
+    if test_errors:
+        print("⚠ VALIDATION FINISHED WITH TEST FAILURES")
+        for error in test_errors:
+            print(f"  ⚠ {error}")
+    else:
+        print("✅ ALL SYSTEMS VALIDATED")
 
 
 if __name__ == '__main__':

@@ -6,11 +6,11 @@ Recorded by the repository-wide documentation audit (2026-08-29).
 
 Tool / educational library (not a publication-track research project).
 
-Evidence checked (2026-08-29): repository root contains no `manuscript/` or
-`docs/manuscript/` directory, no analysis-output or figures directory feeding a
-publication, and no research-paper README section. The repository is a working
-codebase with its own documentation set; no manuscript pipeline (config.yaml,
-section files, references.bib) exists anywhere in the tree.
+Evidence checked (2026-08-29): no manuscript pipeline exists anywhere in the
+tree — `docs/manuscript/` holds only this status file, and there is no
+analysis-output or figures directory feeding a publication, nor a
+research-paper README section. The repository is a working codebase with its
+own documentation set.
 
 ## Why no publication-target manuscript applies today
 
