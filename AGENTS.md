@@ -22,9 +22,7 @@ Verified against disk 2026-08-30 (`ls`, repo `README.md`).
 
 ## Gotchas
 
-- Local-only path under `projects/ongoing/` — matched by the root `.gitignore`
-  rule `projects/*` and never committed. Parent standard: see
-  `../../AGENTS.md` (ActiveInference lane root).
+- Parent standard: the ActiveInference lane root's `AGENTS.md` (not part of this public checkout).
 - Plain lowercase name `transformer`; resolve it via this lane, not a
   hyphenated sibling.
 - Two documentation directories (`doc/` and `docs/`) coexist — check both

@@ -1,9 +1,7 @@
 # AGENTS.md — `transformer/scripts`
 
 ## Scope
-- Local-only path under `projects/ongoing/` — matched by the root
-  `.gitignore` rule `projects/*` and never committed.
-- Parent standard: see `../../AGENTS.md` (ActiveInference lane root).
+- Parent standard: the ActiveInference lane root's `AGENTS.md` (not part of this public checkout).
 
 ## Thin-Orchestrator Contract
 
