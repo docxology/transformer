@@ -431,7 +431,7 @@ Areas of interest:
 
 ## License
 
-[Your chosen license]
+Released under the [MIT License](LICENSE).
 
 ## Citation
 
