@@ -413,7 +413,7 @@ This implementation **prioritizes clarity over speed**:
 ## Dependencies
 
 All standard, well-maintained libraries:
-- PyTorch ≥2.6.0 (Python 3.10+)
+- PyTorch ≥2.6.0 (Python 3.11+)
 - NumPy, Matplotlib, Seaborn, Plotly
 - PyYAML, NetworkX
 - Pytest (for testing)
