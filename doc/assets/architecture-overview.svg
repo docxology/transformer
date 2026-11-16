@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 650" width="1120" height="650" role="img" aria-labelledby="svg-title svg-desc">
+  <title id="svg-title">First-Principles Transformer Architecture Overview</title>
+  <desc id="svg-desc">Dual information highways (vertical residual stream and horizontal causal K/V attention stream), C(n+m, n) combinatorial path lattice, and full state observability.</desc>
+  <defs>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#475569"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#2563eb"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#0d9488"/></marker>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#4f46e5"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#d97706"/></marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#059669"/></marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#e11d48"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#7c3aed"/></marker>
+  </defs>
+  <rect x="4" y="4" width="1112" height="642" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="4" y="4" width="1112" height="68" rx="16" fill="#0f172a"/>
+  <rect x="4" y="56" width="1112" height="16" fill="#0f172a"/>
+  <line x1="4" y1="72" x2="1116" y2="72" stroke="#38bdf8" stroke-width="2.5"/>
+  <rect x="832" y="21" width="266" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="965.0" y="40.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700" fill="#38bdf8" text-anchor="middle">PyTorch · 7 Components · 109 Tests</text>
+  <text x="26.0" y="32.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="start">First-Principles Transformer — Dual Highways &amp; State Observability</text>
+  <text x="26.0" y="54.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1" text-anchor="start">Interpretability-first PyTorch implementation tracking vertical residual flow, horizontal K/V routing, and C(n+m, n) paths</text>
+  <rect x="20" y="88" width="680" height="508" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="20" y="88" width="680" height="32" rx="12" fill="#2563eb" fill-opacity="0.10"/>
+  <line x1="20" y1="120" x2="700" y2="120" stroke="#2563eb" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="565" y="94" width="125" height="20" rx="6" fill="#2563eb" fill-opacity="0.16" stroke="#2563eb" stroke-width="0.8"/>
+  <text x="627.5" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">src/transformer/</text>
+  <text x="34.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">1. Dual Information Highways &amp; Layer-Position Lattice</text>
+  <rect x="36" y="132" width="312" height="114" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="36" y="132" width="5" height="114" rx="2.5" fill="#2563eb"/>
+  <text x="50.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Vertical Highway: Residual Stream</text>
+  <text x="50.0" y="170.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Flows UP across layers (l = 0 … L−1)</text>
+  <text x="50.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Token Embedding + Positional Encoding</text>
+  <text x="50.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">x^(l+1)_j = x^(l)_j + Attn(LN(x)) + FFN</text>
+  <text x="50.0" y="219.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Preserves per-position representation</text>
+  <rect x="368" y="132" width="316" height="114" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.3"/>
+  <rect x="368" y="132" width="5" height="114" rx="2.5" fill="#d97706"/>
+  <text x="382.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Horizontal Highway: K/V Stream</text>
+  <text x="382.0" y="170.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Flows RIGHT across positions (0 … m)</text>
+  <text x="382.0" y="186.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Q_j ('where to look') queries K_≤j</text>
+  <text x="382.0" y="203.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Causal weights α_jk = softmax(Q_j K_k^T/√d)</text>
+  <text x="382.0" y="219.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Routes weighted V_≤j ('what to transmit')</text>
+  <rect x="36" y="262" width="648" height="206" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="36" y="262" width="648" height="32" rx="12" fill="#4f46e5" fill-opacity="0.10"/>
+  <line x1="36" y1="294" x2="684" y2="294" stroke="#4f46e5" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="576" y="268" width="98" height="20" rx="6" fill="#4f46e5" fill-opacity="0.16" stroke="#4f46e5" stroke-width="0.8"/>
+  <text x="625.0" y="282.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#4f46e5" text-anchor="middle">Path Lattice</text>
+  <text x="50.0" y="283.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">2-D Computational Grid: Position j−2 → j  ×  Layer l−1 → l</text>
+  <rect x="56" y="392" width="176" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="56" y="392" width="5" height="60" rx="2.5" fill="#2563eb"/>
+  <text x="70.0" y="412.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l−1, j−2)</text>
+  <text x="70.0" y="430.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Offers K, V right →</text>
+  <rect x="272" y="392" width="176" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="272" y="392" width="5" height="60" rx="2.5" fill="#2563eb"/>
+  <text x="286.0" y="412.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l−1, j−1)</text>
+  <text x="286.0" y="430.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Residual ↑ + K, V →</text>
+  <rect x="488" y="392" width="176" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.3"/>
+  <rect x="488" y="392" width="5" height="60" rx="2.5" fill="#2563eb"/>
+  <text x="502.0" y="412.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l−1, j)</text>
+  <text x="502.0" y="430.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Queries past K, V</text>
+  <rect x="56" y="306" width="176" height="60" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.3"/>
+  <rect x="56" y="306" width="5" height="60" rx="2.5" fill="#0d9488"/>
+  <text x="70.0" y="326.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l, j−2)</text>
+  <text x="70.0" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Attn + FFN update</text>
+  <rect x="272" y="306" width="176" height="60" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.3"/>
+  <rect x="272" y="306" width="5" height="60" rx="2.5" fill="#0d9488"/>
+  <text x="286.0" y="326.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l, j−1)</text>
+  <text x="286.0" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Propagates K, V →</text>
+  <rect x="488" y="306" width="176" height="60" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.3"/>
+  <rect x="488" y="306" width="5" height="60" rx="2.5" fill="#059669"/>
+  <text x="502.0" y="326.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">State (l, j) → Logits</text>
+  <text x="502.0" y="344.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Aggregates C(n+m,n)</text>
+  <path d="M 144.0 392.0 L 144.0 366.0" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M 360.0 392.0 L 360.0 366.0" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M 576.0 392.0 L 576.0 366.0" fill="none" stroke="#2563eb" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M 232.0 422.0 L 272.0 422.0" fill="none" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <path d="M 448.0 422.0 L 488.0 422.0" fill="none" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <path d="M 232.0 336.0 L 272.0 336.0" fill="none" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <path d="M 448.0 336.0 L 488.0 336.0" fill="none" stroke="#d97706" stroke-width="2.2" marker-end="url(#arrow-amber)"/>
+  <rect x="36" y="482" width="648" height="98" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.3"/>
+  <text x="50.0" y="502.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="start">Combinatorial Path Explosion (src/visualization/path_analysis.py)</text>
+  <text x="50.0" y="520.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">Causal routes across n layers &amp; m positions: N_paths = C(n+m, n) = (n+m)! / (n!·m!)</text>
+  <text x="50.0" y="536.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#e2e8f0" text-anchor="start">• 6 layers × 32 pos = 2,324,784 paths   • 12 layers × 512 pos &gt; 10^27 (high redundancy)</text>
+  <rect x="720" y="88" width="380" height="508" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.4"/>
+  <rect x="720" y="88" width="380" height="32" rx="12" fill="#059669" fill-opacity="0.10"/>
+  <line x1="720" y1="120" x2="1100" y2="120" stroke="#059669" stroke-opacity="0.35" stroke-width="1"/>
+  <rect x="958" y="94" width="132" height="20" rx="6" fill="#059669" fill-opacity="0.16" stroke="#059669" stroke-width="0.8"/>
+  <text x="1024.0" y="108.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">return_state=True</text>
+  <text x="734.0" y="109.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="start">2. Introspection &amp; Visual Suite</text>
+  <rect x="736" y="132" width="348" height="106" rx="8" fill="#f8fafc" stroke="#059669" stroke-width="1.3"/>
+  <rect x="736" y="132" width="5" height="106" rx="2.5" fill="#059669"/>
+  <text x="750.0" y="152.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">Complete Forward-Pass State Capture</text>
+  <text x="750.0" y="170.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">model(input_ids, return_state=True)</text>
+  <text x="750.0" y="186.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Records per-layer residuals, Q/K/V tensors,</text>
+  <text x="750.0" y="203.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">attention weights, head entropies &amp; norms</text>
+  <text x="750.0" y="219.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">7 presets (Debug → XLarge) in src/config/</text>
+  <path d="M 910.0 238.0 L 910.0 258.0" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-emerald)"/>
+  <rect x="736" y="260" width="348" height="114" rx="8" fill="#f8fafc" stroke="#7c3aed" stroke-width="1.3"/>
+  <rect x="736" y="260" width="5" height="114" rx="2.5" fill="#7c3aed"/>
+  <text x="750.0" y="280.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">15 Static Plots &amp; 9 Animations</text>
+  <text x="750.0" y="298.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">subway_map_animation.py (validated flow)</text>
+  <text x="750.0" y="314.5" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">visualize_residual_3d (PCA trajectories)</text>
+  <text x="750.0" y="331.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">attention_viz · flow_viz · comparative_viz</text>
+  <text x="750.0" y="347.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Colorblind-safe palettes in color_schemes.py</text>
+  <path d="M 910.0 374.0 L 910.0 394.0" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  <rect x="736" y="396" width="348" height="102" rx="8" fill="#f8fafc" stroke="#0284c7" stroke-width="1.3"/>
+  <rect x="736" y="396" width="5" height="102" rx="2.5" fill="#0284c7"/>
+  <text x="750.0" y="416.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">20+ Analysis Tools &amp; HTML Reports</text>
+  <text x="750.0" y="434.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">src/evaluation/ + src/utils/reporting.py</text>
+  <text x="750.0" y="450.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">Gradient health, layer importance, trend</text>
+  <text x="750.0" y="467.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">analysis &amp; MASTER_INDEX.json manifest</text>
+  <rect x="736" y="510" width="348" height="70" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.3"/>
+  <rect x="736" y="510" width="5" height="70" rx="2.5" fill="#475569"/>
+  <text x="750.0" y="530.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0f172a" text-anchor="start">One-Command Runner (python3 run.py)</text>
+  <text x="750.0" y="548.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="start">uv auto-setup · examples · animations · reports</text>
+  <path d="M 700.0 336.0 L 720.0 336.0" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-emerald)"/>
+  <rect x="16" y="612" width="1088" height="28" rx="8" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="28.0" y="630.0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1e293b" text-anchor="start">Verification Gate: uv run --with-requirements requirements.txt pytest -q (109 real PyTorch tests · zero mocks)</text>
+  <text x="1092.0" y="630.0" font-family="ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace" font-size="11.0" font-weight="500" fill="#334155" text-anchor="end">MIT License · docxology/transformer</text>
+</svg>
