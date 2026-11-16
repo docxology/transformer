@@ -6,6 +6,8 @@ A **comprehensive, production-quality, educational** transformer implementation 
 [![Documentation](https://img.shields.io/badge/docs-complete-blue)]()
 [![Code Style](https://img.shields.io/badge/code%20style-modular-orange)]()
 
+![First-Principles Transformer Architecture Overview](doc/assets/architecture-overview.svg)
+
 ## What Makes This Different
 
 Unlike typical transformer implementations, this provides:
