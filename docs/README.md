@@ -1,14 +1,17 @@
-# docs
+# Transformer documentation
 
-Publication-track documentation folder.
-
-The project's user-facing documentation lives in [`../doc/`](../doc/) — start at
-[`../doc/DOCUMENTATION_INDEX.md`](../doc/DOCUMENTATION_INDEX.md). This folder holds only the
-manuscript-status record:
-
-- [`manuscript/MANUSCRIPT_STATUS.md`](manuscript/MANUSCRIPT_STATUS.md) — why this repository has no
-  paper-track manuscript pipeline.
-
-`transformer` is a working implementation / educational library, not a publication-track research
-project, so no `config.yaml`, section files (`00_abstract.md` … `99_references.md`), or
-`references.bib` are maintained here.
+- [Quick start](guides/quickstart.md) sets up a CPU environment and runs the
+  first traced forward pass.
+- [Running and configuration](guides/running.md) covers presets, config files,
+  examples, output paths, and verification.
+- [Information flow](concepts/information_flow.md) follows a token through
+  embeddings, attention, both residual updates, and the output projection.
+- [Theory](theory/README.md) describes causal masking, attention entropy, and
+  the grid path model.
+- [Analysis](guides/analysis.md) explains what the metrics measure and how to
+  reproduce the manuscript evidence.
+- [Visualization](guides/visualization.md) and its [API reference](api/visualization.md)
+  cover Matplotlib, Plotly, and GIF outputs.
+- [Technical manuscript](manuscript/README.md) contains the canonical source,
+  results, and pinned build instructions.
+- [Archive](archive/README.md) indexes earlier guides and validation records.

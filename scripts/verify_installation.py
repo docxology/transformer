@@ -87,14 +87,14 @@ def main():
     print(f"    = {compute_path_counts(config.n_layers-1, seq_len-1):,} paths")
     
     print("\nNext Steps:")
-    print("  1. Run: python3 examples/basic_usage.py")
-    print("  2. Run: python3 examples/path_analysis.py")
-    print("  3. Run: python3 examples/animation_demo.py")
+    print("  1. Run: python -m examples.basic_usage")
+    print("  2. Run: python -m examples.path_analysis")
+    print("  3. Run: python -m examples.animation_demo")
     print("  4. Explore: jupyter notebook (if installed)")
     
     print("\nDocumentation:")
     print("  - README.md: Overview and installation")
-    print("  - ARCHITECTURE.md: Information flow principles")
+    print("  - docs/concepts/information_flow.md: Forward-pass state")
     print("  - examples/README.md: Usage examples")
 
 

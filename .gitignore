@@ -64,3 +64,7 @@ outputs/reports/*.json
 !outputs/animations/02_attention_evolution.gif
 
 
+
+# Isolated environments and generated manuscript builds
+.venv/
+/output/

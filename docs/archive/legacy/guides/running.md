@@ -292,14 +292,14 @@ After running `run.py` successfully:
 ## Related Documentation
 
 - [Quick Start Guide](quickstart.md) - 5-minute manual tutorial
-- [Examples README](../../examples/README.md) - Detailed example documentation
+- [Examples README](../../../../examples/README.md) - Detailed example documentation
 - [Visualization Guide](visualization.md) - Understanding outputs
 - [Animation Guide](animations.md) - Animation reference
 
 ## See Also
 
 - Repository structure: [README.md](../../README.md)
-- Script documentation: [scripts/](../../scripts/)
+- Script documentation: [scripts/](../../../../scripts)
 - All documentation: [doc/INDEX.md](../INDEX.md)
 
 ---

@@ -426,7 +426,7 @@ except ImportError as e:
             "View outputs in the 'outputs/' directory",
             "Check animations in 'outputs/animations/'",
             "Read generated reports in 'outputs/reports/'",
-            "See documentation in 'doc/'"
+            "See documentation in 'docs/'"
         ]
         for step in next_steps:
             self.logger.list_item(step)
@@ -434,8 +434,8 @@ except ImportError as e:
         self.logger.section("Documentation")
         docs = [
             "README.md - Project overview",
-            "doc/INDEX.md - Documentation index",
-            "doc/guides/quickstart.md - Quick start guide"
+            "docs/README.md - Documentation index",
+            "docs/guides/quickstart.md - Quick start guide"
         ]
         for doc in docs:
             self.logger.list_item(doc)

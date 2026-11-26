@@ -1,31 +1,13 @@
-# AGENTS.md — `transformer`
+# Transformer repository guidance
 
-**What this is:** Real directory (not a symlink) in the ActiveInference lane,
-hosting **First-Principles Transformer**: a comprehensive, production-quality,
-educational transformer implementation with full observability (residual +
-K/V information streams), 20+ visualizations, 74 tests, and 20+ pages of
-documentation. Built to understand, not just use. See the repo's `README.md`
-and `QUICK_START.md`.
+This repository contains an educational PyTorch transformer with state
+capture for analysis and visualization. Start at [README.md](README.md).
 
-Verified against disk 2026-08-30 (`ls`, repo `README.md`).
-
-## Layout
-
-- `src/` — implementation code.
-- `tests/` — test suite (74 tests per README).
-- `examples/`, `scripts/`, `run.py` — runnable entry points and examples.
-- `doc/` and `docs/` — documentation (two documentation trees are present).
-- `outputs/` — generated artifacts.
-- `requirements.txt`, `CONTRIBUTING.md`, `QUICK_START.md`, `README.md`,
-  `AGENTS.md` (this file); plus `SUBWAY_MAP_*` and
-  `DOCUMENTATION_VERIFICATION_REPORT.md` reports at the root.
-
-## Gotchas
-
-- Parent standard: the ActiveInference lane root's `AGENTS.md` (not part of this public checkout).
-- Plain lowercase name `transformer`; resolve it via this lane, not a
-  hyphenated sibling.
-- Two documentation directories (`doc/` and `docs/`) coexist — check both
-  before claiming documentation is missing.
-- Repo payload (source, tests, outputs) is out of scope for doc passes; edit
-  only this file and `README.md` when improving lane documentation.
+- [docs/](docs/README.md) contains maintained user documentation and
+  [docs/manuscript/](docs/manuscript/README.md) contains manuscript source.
+- `src/` implements the model and supporting tools. `tests/` covers their behavior.
+- `examples/`, `scripts/`, and `run.py` provide runnable entry points.
+- `outputs/` holds native generated artifacts, including a tracked example GIF
+  and system-report snapshot. Manuscript renders use a separate `output/` tree.
+- Update `DOC_STRUCTURE` in `src/utils/documentation.py` when moving a maintained
+  page that appears in the generated index. The documentation tests check its paths.

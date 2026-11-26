@@ -156,8 +156,8 @@ model.load_state_dict(torch.load('model.pth'))
 
 ## Next Steps
 
-- [Basic Usage Example](../../examples/basic_usage.py) - More detailed examples
-- [Training Example](../../examples/training_example.py) - Complete training workflow
+- [Basic Usage Example](../../../../examples/basic_usage.py) - More detailed examples
+- [Training Example](../../../../examples/training_example.py) - Complete training workflow
 - [Visualization Guide](visualization.md) - All visualization options
 - [API Reference](../api/visualization.md) - Detailed API documentation
 
