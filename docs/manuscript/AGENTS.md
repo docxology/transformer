@@ -1,14 +1,5 @@
-# AGENTS.md — `transformer/docs/manuscript`
+# Manuscript guidance
 
-> Status: SKELETON (auto-generated 2026-08-30, fleet pass in progress).
-> Contents below must be verified and expanded by a lane agent before this
-> stub is considered accurate.
-
-## Scope
-- Repository-wide policy for template projects is maintained in the template repository, not restated here.
-
-## Layout
-- (to be filled: list child folders/files and their roles)
-
-## Gotchas
-- (to be filled)
+Edit ordered Markdown sections, configuration, and references here. Use the
+[build guide](README.md) to regenerate the evidence and check the rendered
+artifact. Keep claims scoped to the seeded CPU probe and the implemented model.

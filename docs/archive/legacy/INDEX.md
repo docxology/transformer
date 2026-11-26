@@ -195,7 +195,7 @@ transformer/
 
 ### For Beginners
 1. Start with [Quick Start Guide](guides/quickstart.md)
-2. Run [Basic Usage Example](../examples/basic_usage.py)
+2. Run [Basic Usage Example](../../../examples/basic_usage.py)
 3. Explore [Animations](ANIMATION_INDEX.md)
 
 ### For Advanced Users
@@ -204,9 +204,9 @@ transformer/
 3. Check [API Reference](api/visualization.md)
 
 ### For Developers
-1. Read [System Capabilities](../README.md#whats-included)
-2. Review [Test Suite](../tests/)
-3. See [Examples](../examples/)
+1. Read [System Capabilities](OVERVIEW.md#key-features)
+2. Review [Test Suite](../../../tests)
+3. See [Examples](../../../examples)
 
 ## Latest Additions ⭐
 
@@ -232,7 +232,7 @@ transformer/
 - [Animation Guide](guides/animations.md) - Complete animation reference
 - [Analysis Guide](guides/analysis.md) - Analysis toolkit guide
 - [Animation Index](ANIMATION_INDEX.md) - Animation quick reference
-- [System Capabilities](../README.md#whats-included) - Full capability list
+- [System Capabilities](OVERVIEW.md#key-features) - Full capability list
 
 ### New Logging & Reporting
 - `TransformerLogger` - Structured logging system
@@ -257,7 +257,7 @@ Choose your path:
 **Learn** → [Quick Start](guides/quickstart.md) → [Concepts](concepts/information_flow.md)  
 **Visualize** → [Animation Guide](guides/animations.md) → [Visualization Guide](guides/visualization.md)  
 **Analyze** → [Analysis Guide](guides/analysis.md) → [API Reference](api/visualization.md)  
-**Develop** → [Examples](../examples/) → [Tests](../tests/) → [Source](../src/)
+**Develop** → [Examples](../../../examples) → [Tests](../../../tests) → [Source](../../../src)
 
 ---
 

@@ -106,7 +106,7 @@ pip install -r requirements.txt
 pytest tests/ -v
 
 # Run examples to verify
-python examples/basic_usage.py
+python -m examples.basic_usage
 ```
 
 ---
@@ -266,16 +266,16 @@ def test_attention_causality():
 - **Docstrings**: For functions/classes
 - **Comments**: For complex logic
 - **README.md**: For overview
-- **doc/**: For detailed guides
+- **docs/**: For detailed guides
 - **CHANGELOG.md**: For all changes
 
 ### Documentation Structure
 
 ```
-doc/
+docs/
 ├── theory/              # Conceptual explanations
 ├── guides/              # How-to guides
-├── praxis/              # Practical recipes
+├── manuscript/          # Technical manuscript source
 ├── concepts/            # Deep dives
 └── api/                 # API reference
 ```
@@ -461,9 +461,9 @@ This project prioritizes:
 
 ## Questions?
 
-- **Documentation**: See [DOCUMENTATION_INDEX.md](doc/DOCUMENTATION_INDEX.md)
-- **FAQ**: See [FAQ_COMPREHENSIVE.md](doc/FAQ_COMPREHENSIVE.md)
-- **Glossary**: See [GLOSSARY.md](doc/GLOSSARY.md)
+- **Documentation**: See [documentation index](docs/README.md)
+- **FAQ**: See [archived FAQ](docs/archive/legacy/FAQ_COMPREHENSIVE.md)
+- **Glossary**: See [archived glossary](docs/archive/legacy/GLOSSARY.md)
 - **Issues**: Open a GitHub issue
 - **Discussions**: Use GitHub Discussions
 

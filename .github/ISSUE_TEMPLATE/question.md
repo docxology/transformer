@@ -23,9 +23,9 @@ assignees: ''
 ## What I've Already Checked
 
 <!-- Please check these before asking -->
-- [ ] [FAQ](../../doc/FAQ_COMPREHENSIVE.md)
-- [ ] [Documentation Index](../../doc/DOCUMENTATION_INDEX.md)
-- [ ] [Glossary](../../doc/GLOSSARY.md)
+- [ ] [Quick start](../../docs/guides/quickstart.md)
+- [ ] [Documentation Index](../../docs/README.md)
+- [ ] [Theory and terminology](../../docs/theory/README.md)
 - [ ] Existing issues
 - [ ] Code examples in `examples/`
 

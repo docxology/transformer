@@ -61,24 +61,24 @@ visualize_attention(attention, save_path='my_attention.png')
 ## 4. Next Steps
 
 **Learn Theory** (2-3 hours):
-- Read [Transformer Theory](doc/theory/TRANSFORMER_THEORY.md)
+- Read [Transformer Theory](legacy/theory/TRANSFORMER_THEORY.md)
 - Understand the dual information highways
 - See computational path explosion
 
 **Implement Something** (1-2 hours):
-- Follow [Implementation Guide](doc/guides/IMPLEMENTATION_GUIDE.md)
-- Try [Practical Recipes](doc/praxis/PRACTICAL_RECIPES.md)
+- Follow [Implementation Guide](legacy/guides/IMPLEMENTATION_GUIDE.md)
+- Try [Practical Recipes](legacy/praxis/PRACTICAL_RECIPES.md)
 - Run `examples/training_example.py`
 
 **Explore Visualizations**:
 - Check `outputs/visualizations/` - 10+ static plots
 - Check `outputs/animations/` - 9 animated GIFs
-- Read [Visualization Guide](doc/guides/visualization.md)
+- Read [Visualization Guide](legacy/guides/visualization.md)
 
 **Get Help**:
-- [FAQ](doc/FAQ_COMPREHENSIVE.md) - 45 questions answered
-- [Glossary](doc/GLOSSARY.md) - 77 terms defined
-- [Documentation Index](doc/DOCUMENTATION_INDEX.md) - Master hub
+- [FAQ](legacy/FAQ_COMPREHENSIVE.md) - 45 questions answered
+- [Glossary](legacy/GLOSSARY.md) - 77 terms defined
+- [Documentation Index](legacy/DOCUMENTATION_INDEX.md) - Master hub
 
 ---
 
@@ -186,32 +186,32 @@ config = get_preset_config('small')  # or 'tiny' or 'debug'
 ```
 
 **Issue**: Need help  
-**Solution**: Check [FAQ](doc/FAQ_COMPREHENSIVE.md) or [Glossary](doc/GLOSSARY.md)
+**Solution**: Check [FAQ](legacy/FAQ_COMPREHENSIVE.md) or [Glossary](legacy/GLOSSARY.md)
 
 ---
 
 ## What's Next?
 
 ### For Learning
-1. Read [Transformer Theory](doc/theory/TRANSFORMER_THEORY.md)
-2. Follow [Complete Beginner Path](doc/DOCUMENTATION_INDEX.md#path-1-complete-beginner)
+1. Read [Transformer Theory](legacy/theory/TRANSFORMER_THEORY.md)
+2. Follow [Complete Beginner Path](legacy/DOCUMENTATION_INDEX.md#path-1-complete-beginner)
 3. Explore visualizations in `outputs/`
 
 ### For Building
-1. Read [Implementation Guide](doc/guides/IMPLEMENTATION_GUIDE.md)
-2. Try [Practical Recipes](doc/praxis/PRACTICAL_RECIPES.md)
+1. Read [Implementation Guide](legacy/guides/IMPLEMENTATION_GUIDE.md)
+2. Try [Practical Recipes](legacy/praxis/PRACTICAL_RECIPES.md)
 3. Modify `examples/training_example.py`
 
 ### For Research
-1. Read [Architecture](doc/ARCHITECTURE.md)
-2. Study [Path Analysis](examples/path_analysis.py)
+1. Read [Architecture](legacy/ARCHITECTURE.md)
+2. Study [Path Analysis](../../examples/path_analysis.py)
 3. Explore source code in `src/`
 
 ---
 
 ## Full Documentation
 
-**📚 [Complete Documentation Index](doc/DOCUMENTATION_INDEX.md)**
+**📚 [Complete Documentation Index](legacy/DOCUMENTATION_INDEX.md)**
 
 This is your master hub with:
 - 6 learning paths for different goals

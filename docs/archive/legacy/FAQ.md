@@ -323,7 +323,7 @@ logits, state = model(input_ids, mask=None)
 
 ### Q: How do I contribute?
 
-**A:** See [Contributing Guide](../CONTRIBUTING.md):
+**A:** See [Contributing Guide](../../../CONTRIBUTING.md):
 1. Fork repository
 2. Create feature branch
 3. Write code + tests + docs
@@ -344,7 +344,7 @@ logits, state = model(input_ids, mask=None)
 
 - Check [Documentation Index](INDEX.md)
 - Read [Troubleshooting Guide](guides/running.md#troubleshooting)
-- Look at [Examples](../examples/)
+- Look at [Examples](../../../examples)
 - Open an issue on GitHub
 
 

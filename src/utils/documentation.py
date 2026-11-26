@@ -25,36 +25,29 @@ FEATURE_COUNTS = {
 }
 
 # Documentation manifest. Every entry must exist on disk relative to the
-# project root (verified 2026-09-06; see tests/test_features.py).
+# project root (verified by tests/test_documentation.py).
 DOC_STRUCTURE = {
     "concepts": [
-        "doc/concepts/information_flow.md",
-        "doc/concepts/attention.md",
+        "docs/concepts/information_flow.md",
+        "docs/theory/README.md",
     ],
     "guides": [
-        "doc/guides/quickstart.md",
-        "doc/guides/visualization.md",
-        "doc/guides/animations.md",
-        "doc/guides/analysis.md",
+        "docs/guides/quickstart.md",
+        "docs/guides/running.md",
+        "docs/guides/visualization.md",
+        "docs/guides/analysis.md",
     ],
     "api_reference": [
-        "doc/api/visualization.md",
+        "docs/api/visualization.md",
     ],
     "system_docs": [
         "README.md",
-        "QUICK_START.md",
         "CONTRIBUTING.md",
-        "doc/ARCHITECTURE.md",
-        "doc/OVERVIEW.md",
-        "doc/VALIDATION_CERTIFICATE.md",
-        "doc/DOCUMENTATION_INDEX.md",
+        "docs/manuscript/README.md",
     ],
     "indexes": [
-        "doc/INDEX.md",
-        "doc/ANIMATION_INDEX.md",
-        "doc/FAQ.md",
-        "doc/FAQ_COMPREHENSIVE.md",
-        "doc/GLOSSARY.md",
+        "docs/README.md",
+        "docs/archive/README.md",
     ],
     "examples": [
         "examples/basic_usage.py",
@@ -88,6 +81,15 @@ def count_test_functions(tests_dir: Path) -> int:
     return total
 
 
+def _maintained_documentation(project_root: Path) -> list[Path]:
+    """Return Markdown sources in docs/, excluding historical snapshots."""
+    docs = project_root / "docs"
+    return [
+        path for path in docs.rglob("*.md")
+        if path.relative_to(docs).parts[0] != "archive"
+    ]
+
+
 def build_master_index(project_root: Path) -> dict:
     """Build the deterministic master documentation index.
 
@@ -100,7 +102,7 @@ def build_master_index(project_root: Path) -> dict:
     capabilities = dict(FEATURE_COUNTS)
     capabilities.update({
         "tests": count_test_functions(project_root / "tests"),
-        "documentation_files": len(list((project_root / "doc").rglob("*.md"))),
+        "documentation_files": len(_maintained_documentation(project_root)),
         "examples": len(list((project_root / "examples").glob("*.py"))),
         "config_presets": len(list_presets()),
         "total_python_files": (
@@ -137,7 +139,7 @@ def count_project_files(project_root: Path) -> dict:
         "test_files": len(list((project_root / "tests").rglob("*.py"))),
         "example_files": len(list((project_root / "examples").rglob("*.py"))),
         "doc_files": (
-            len(list((project_root / "doc").rglob("*.md")))
+            len(_maintained_documentation(project_root))
             + len(list(project_root.glob("*.md")))
         ),
         "animation_files": _count("outputs/animations/*.gif"),

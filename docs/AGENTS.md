@@ -1,14 +1,5 @@
-# AGENTS.md — `transformer/docs`
+# Documentation guidance
 
-> Status: SKELETON (auto-generated 2026-08-30, fleet pass in progress).
-> Contents below must be verified and expanded by a lane agent before this
-> stub is considered accurate.
-
-## Scope
-- Repository-wide policy for template projects is maintained in the template repository, not restated here.
-
-## Layout
-- (to be filled: list child folders/files and their roles)
-
-## Gotchas
-- (to be filled)
+[README.md](README.md) is the entry point. Keep maintained examples aligned with
+the current implementation. Treat [archive/](archive/README.md) as historical
+material. Update the documentation manifest when moving an indexed page.
